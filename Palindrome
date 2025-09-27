@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        // Convert to lowercase and remove spaces (optional for flexibility)
+        str = str.replaceAll("\\s+", "").toLowerCase();
+
+        // Reverse the string
+        String reversed = new StringBuilder(str).reverse().toString();
+
+        // Check palindrome
+        if (str.equals(reversed)) {
+            System.out.println("✅ It is a palindrome.");
+        } else {
+            System.out.println("❌ It is not a palindrome.");
+        }
+
+        sc.close();
+    }
+}
